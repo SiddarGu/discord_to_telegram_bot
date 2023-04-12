@@ -39,4 +39,4 @@ async function checkLive() {
     }
 }
 
-setTimeout(checkLive, 1000 * 30);
+setInterval(checkLive, 1000 * 30);

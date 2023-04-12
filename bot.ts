@@ -30,10 +30,7 @@ const client = new Client({
 });
 
 client.on('messageCreate', (message) => {
-    console.log('id');
-    console.log(chatId);
     bot.sendMessage(chatId, message.content);
 })
 
 client.login(discordToken);
-

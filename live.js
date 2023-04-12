@@ -22,7 +22,7 @@ bot.onText(/\/update/, (msg) => {
         { encoding: "utf-8", flag: "w" };
 });
 
-async function checkLive(bot, chatId) {
+async function checkLive() {
     for (let channelName in channels) {
         let response = await fetch(`https://www.twitch.tv/${channelName}`);
         let responseText = await response.text();
@@ -39,4 +39,4 @@ async function checkLive(bot, chatId) {
     }
 }
 
-setTimeout(checkLive(bot, chatId), 1000 * 30);
+setTimeout(checkLive, 1000 * 30);
